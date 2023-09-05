@@ -1,0 +1,46 @@
+import com.drools_testing.entity.StudentDto
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+
+dialect  "mvel"
+
+
+
+rule " Discount on Fee if marks are greater then 90%"
+    when
+  student:StudentDto(grade=='A' || grade=='a')          //or  student:StudentDto(grade=='a')
+    then
+  student.setDiscount(0.09);  //for 9% of discount
+  double discount=student.getDiscount();
+  double fee = student.getFee();
+    fee= discount*fee;
+    double discountedFee=student.getFee()-fee;
+      student.setFee(discountedFee);
+      Logger logger= LoggerFactory.getLogger(StudentDto.class);
+  System.out.println("Setting  9% of Discount for Grade A Student"+" "+discountedFee);
+  logger.info("Info Log Starts Setting  9% of Discount for Grade A Student",discountedFee);
+  logger.debug("Debug Log Starts Setting  9% of Discount for Grade A Student",discountedFee);
+end
+
+rule "Set Email OF Student"
+
+
+when
+student:StudentDto(email=="test@email.com")
+
+then
+Logger logger= LoggerFactory.getLogger(StudentDto.class);
+logger.debug("Inside email Check");
+student.setEmail("OK OK");
+
+ end
+
+ rule "Check Department Name"
+ when
+ student:StudentDto(lastName=="Naseem")
+ then
+ Logger logger= LoggerFactory.getLogger(StudentDto.class);
+ logger.debug("Inside Last name Check");
+   student.setFirstName("Muhammad");
+   student.setLastName("Anis");
+   end
