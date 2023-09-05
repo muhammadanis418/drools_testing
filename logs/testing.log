@@ -24,3 +24,13 @@
 2023-09-05 12:41:03,289 DEBUG [] - Inside Last name Check
 2023-09-05 12:41:14,398 DEBUG [] - Inside email Check
 2023-09-05 12:41:14,399 DEBUG [] - Inside Last name Check
+2023-09-05 15:27:33,998 WARN  [] - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.drools_testing.entity.StudentDto> com.drools_testing.controller.DroolsController.getDiscountOnStudentObtainedGrades(com.drools_testing.entity.StudentDto)]
+2023-09-05 15:48:21,867 WARN  [] - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.drools_testing.entity.StudentDto> com.drools_testing.controller.DroolsController.getDiscountOnStudentObtainedGrades(com.drools_testing.entity.StudentDto)]
+2023-09-05 15:50:15,815 INFO  [] - Info Log Starts Setting  9% of Discount for Grade A Student
+2023-09-05 15:50:15,815 DEBUG [] - Debug Log Starts Setting  9% of Discount for Grade A Student
+2023-09-05 15:50:15,815 DEBUG [] - Inside email Check
+2023-09-05 15:50:15,815 DEBUG [] - Inside Last name Check
+2023-09-05 15:52:24,677 INFO  [] - Info Log Starts Setting  9% of Discount for Grade A Student
+2023-09-05 15:52:24,677 DEBUG [] - Debug Log Starts Setting  9% of Discount for Grade A Student
+2023-09-05 15:52:24,678 DEBUG [] - Inside email Check
+2023-09-05 15:52:24,678 DEBUG [] - Inside Last name Check
